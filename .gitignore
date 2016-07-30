@@ -1,0 +1,10 @@
+#Company
+
+assets/dist
+gulpfile.js
+gulp/
+
+#libs
+node_modules/
+bower_components/
+assets/lib
