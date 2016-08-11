@@ -1,20 +1,81 @@
 <head>
     <link rel="stylesheet" href="app/components/me/css/me.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 
 
-<a class="item item-avatar"><img src="http://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg"></a>
-<div class="list">
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">First Name</span>
-    <input type="text" placeholder="Hive">
-  </label>
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Last Name</span>
-    <input type="text" placeholder="Surname">
-  </label>
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Email</span>
-    <input type="text" placeholder="john@suhr.com">
-  </label>
-</div>
+<ion-view>
+<ion-content style="background-color: #333;">
+
+<main>
+<div class="jumbo" style="background: url(http://cine.nl/wp-content/uploads/2015/07/the-revenant-trailer.jpg) center no-repeat; background-size: cover;"></div>
+	
+	
+	<div class="container icons">
+		<div class="big-icon"><img ng-src="{{image}}"/></div>
+		
+		<!--<div class="rate">
+			 <a class="star-btn add-btn btn-floating btn-large waves-effect waves-light blue darken-1"><i class="material-icons"></i></a>
+		 	<a class="like-btn add-btn btn-floating btn-large waves-effect waves-light blue darken-1"><i class="material-icons"></i></a>
+		</div>-->
+		
+		<div id="followed-by" class="followed-by"><a class="center fav-buttons">Favorited by {{Followers}}</a></div>
+		<div id= "following" class="following"> {{Following}} Favorites</div>
+		
+		<!--<div class="add">
+			<a class="add-btn btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+		</div>-->
+	</div>
+	<div class="details">
+		<h3 style="color: #ffc900;" class="center">{{Username}}</h3>
+		<p class="center">Totally not DiCaprio XD</p>
+	</div>
+	
+	<img ng-src="{{profileBackground}}"/>
+	
+	
+	<!--
+
+	    <input id="tab-1" type="radio" name="tab-group" checked="checked" />
+	    <label for="tab-1"><ng-md-icon icon="account_circle" style="fill: ..." size="15"></ng-md-icon> About</label>
+	  
+	    <ng-md-icon icon="settings" size="22">
+	-->    
+    <div class="min-tabs">
+    
+        <div class="min-tab min-tab-1">
+           <input type="radio" id="tab-1" name="tab-group-1" checked>
+           <label for="tab-1"><i class="fa fa-user" ></i> About</label>
+       
+           <div class="content">
+               <md-card><md-card-content>
+               this page is still a work in progress<br><br><br>
+               I will change you and fill you with content tomorrow
+               </md-card-content></md-card>
+           </div> 
+        </div>
+        
+        <div class="min-tab min-tab-2">
+           <input type="radio" id="tab-2" name="tab-group-1">
+           <label for="tab-2">Activity</label>
+           
+           <div class="content">
+               ...
+           </div> 
+        </div>
+        
+        <div class="min-tab min-tab-3">
+           <input type="radio" id="tab-3" name="tab-group-1">
+           <label for="tab-3">Settings</label>
+         
+           <div class="content">
+               <md-button class="md-raised md-warn" ng-click="logout_form();">
+	            Logout
+	           </md-button>
+           </div> 
+        </div>
+    </div>    
+</main>
+
+</ion-content>
+</ion-view>

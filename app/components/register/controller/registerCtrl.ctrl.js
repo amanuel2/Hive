@@ -2,103 +2,116 @@
 
     'use strict';
     angular.module('Hive')
-        .controller("registerCtrl", ["$scope", "refService","letterAvatarService","$ionicPopup", registerCtrlFunc])
+        .controller("registerCtrl", ["$scope", "refService", "letterAvatarService", "$ionicPopup", registerCtrlFunc])
 
-    function registerCtrlFunc($scope, refService,letterAvatarService,$ionicPopup) {
+    function registerCtrlFunc($scope, refService, letterAvatarService, $ionicPopup) {
+        var usersRef = new Firebase('https://hive-study.firebaseio.com/');
 
+        //swal("Here's a message!")
 
 
         $scope.registerForm = function() {
+            
+            var EMAIL_REG = document.getElementById("reg_email").value
+            var FIRST_NAME_REG = document.getElementById("reg_first_name").value;
+            var LAST_NAME_REG = document.getElementById("reg_last_name").value;
+            var USERNAME_REG = document.getElementById("reg_user_name").value;
+            $scope.username_dupe = false;
 
-            $scope.isUsernameDupe = false;
-            refService.ref().child("UserAuthInfo").on("value", function(snapshot) {
-                snapshot.forEach(function(childSNap) {
+            if (!(EMAIL_REG && FIRST_NAME_REG && LAST_NAME_REG && USERNAME_REG && (document.getElementById("reg_pass").value) &&
+                    (document.getElementById("reg_confirm_pass").value))) {
+                sweetAlert("Oops...", "Forgot to fill one of the fields!", "error");
 
-                    var key = childSNap.key();
-                    var childData = childSNap.val();
+            }
 
-                    if (childData.Username == $scope.register.username) {
-                        $scope.isUsernameDupe = true;
-                        return;
+
+            if (document.getElementById("reg_pass").value == document.getElementById("reg_confirm_pass").value) {
+                refService.ref().child("UserAuthInfo").once("value", function(snapshot) {
+                    snapshot.forEach(function(childSNap) {
+
+                        var key = childSNap.key();
+                        var childData = childSNap.val();
+
+                        if (childData.Username == USERNAME_REG) {
+                            console.log(childData.Username)
+                            $scope.username_dupe = true;
+                            return;
+                        }
+
+                    })
+
+                    console.log($scope.username_dupe);
+                    if ($scope.username_dupe == true)
+                    {
+                        console.log("OOPSY");
+                         sweetAlert("Oops...", "Username is a duplicate!", "error");;
+                         console.log($scope.username_dupe);
                     }
-                });
-                if (($scope.isUsernameDupe != true)) {
-                    if ($scope.isUsernameDupe == false) {
+                       
+
+                    else if ($scope.username_dupe == false) {
+                        console.log("GOOD");
+                        console.log($scope.username_dupe);
                         refService.ref().createUser({
-                            email: $scope.register.email,
-                            password: $scope.register.password
-                        }, function(error, userData) {
+                            email: EMAIL_REG,
+                            password: document.getElementById("reg_pass").value
+                        }, function(error, authData) {
                             if (error) {
                                 switch (error.code) {
                                     case "EMAIL_TAKEN":
-                                        var alertPopup = $ionicPopup.alert({
-                                             title: 'EMAIL_TAKEN',
-                                             template: 'The new user account cannot be created because the email is already in use.'
-                                         });
+                                        sweetAlert("Oops...", "The new user account cannot be created because the email is already in use.", "error");
                                         break;
                                     case "INVALID_EMAIL":
-                                        var alertPopup = $ionicPopup.alert({
-                                             title: 'INVALID_EMAIL',
-                                             template: 'The specified email is not a valid email.'
-                                         });
+
+                                        sweetAlert("Oops...", "The specified email is not a valid email.", "error");
                                         break;
                                     default:
-                                        var alertPopup = $ionicPopup.alert({
-                                             title: 'ERROR',
-                                             template: "Error creating user:" + error
-                                         });
+                                        sweetAlert("Oops...", "Error creating user:" + error, "error");
                                 }
                             }
                             else {
-                                $scope.$evalAsync(
-                                    function() {
-                                        var letterAvatar = letterAvatarService.getLetterURL($scope.register.username, $scope.loadImageJSON);
-                                        setTimeout(function() {
-                                            refService.ref().child("UserAuthInfo").child(userData.uid).set({
-                                                Username: $scope.register.username,
-                                                Email: $scope.register.email,
-                                                UID: userData.uid,
-                                                Image: letterAvatarService.getLetterURL($scope.register.username),
-                                                Moderator: false,
-                                                BronzeBadge: 0,
-                                                SilverBadge: 0,
-                                                GoldBadge: 0,
-                                                PlatinumBadge: 0,
-                                                newUser: true,
-                                                profileBackground: 'http://rmdeaftheatre.com/wp-content/uploads/2012/11/gray-background-3.jpg',
-                                                followers: 0,
-                                                following: 0,
-                                                profileViews: 0,
-                                                Precence: -1,
-                                                Points: 0,
-                                                DateJoined: Date.now(),
-                                            });
 
-                                        }, 1500);
 
-                                         var alertPopup = $ionicPopup.alert({
-                                             title: 'SUCESS',
-                                             template: "SUCESSFULLY REGISTERED" + error
-                                         });
-                                    }
-                                );
+                                refService.ref().child("UserAuthInfo").child(authData.uid).set({
+                                    Username: USERNAME_REG,
+                                    Email: EMAIL_REG,
+                                    UID: authData.uid,
+                                    Image: letterAvatarService.getLetterURL(USERNAME_REG),
+                                    Moderator: false,
+                                    BronzeBadge: 0,
+                                    SilverBadge: 0,
+                                    GoldBadge: 0,
+                                    PlatinumBadge: 0,
+                                    newUser: true,
+                                    profileBackground: 'http://cine.nl/wp-content/uploads/2015/07/the-revenant-trailer.jpg',
+                                    followers: 0,
+                                    following: 0,
+                                    profileViews: 0,
+                                    Precence: -1,
+                                    Points: 0,
+                                    DateJoined: Date.now(),
+                                })
+
+                                swal("Good job!", "Sucessfully Registered", "success")
+                                
+                                $state.go("home");
 
                             }
-                        });
+
+                        })
+
                     }
 
-                }
-                else {
-                    var alertPopup = $ionicPopup.alert({
-                                             title: 'ERROR',
-                                             template: "USERNAME IS ALREDY IN USE"
-                                         });
-                }
-            });
+                    else
+                        sweetAlert("Oops...", "What the fuck?", "error");
+
+                })
 
 
-
-
+            }
+            else {
+                sweetAlert("Oops...", "Password Confirmation Incorrect!", "error");
+            }
         };
 
 

@@ -3,9 +3,9 @@
     <link rel="stylesheet" href="app/components/register/scss/register.css" type="text/css" />
 </head>
 
-<form name="register_form">
-    <ion-view view-title="Login" align-title="center">
-    <ion-content style="background: #FFD700; background-size: cover;">
+<ion-view view-title="Sign Up" align-title="center">
+<ion-content style="background: #FFD700; background-size: cover;">
+    <form name="register_form">
         <div style="max-width: 500px; margin: auto;">   
             <div class="hero no-header flat">
                 <div class="content">
@@ -14,43 +14,63 @@
                 </div>
             </div>
             <div class="list" style="margin: 0;">
-                <!--<ion-md-input placeholder="Username" highlight-color="balanced" type="text"></ion-md-input>
-                <ion-md-input placeholder="Password" highlight-color="energized" type="password"></ion-md-input>-->
             <div class="padding1">
-                <label class="item item-input cust-input">
-                    <input type="text" placeholder="First name">
+                 <label class="item item-input cust-input">
+                    <input type="text" id="reg_user_name" placeholder="Username">
                 </label>
-            </div>
-            <div class="padding1">
                 <label class="item item-input cust-input">
-                    <input type="text" placeholder="Last name">
+                    <input type="text" id="reg_first_name" placeholder="First name" required>
                 </label>
-            </div>
-            <div class="padding1">
                 <label class="item item-input cust-input">
-                    <input type="text" placeholder="Email">
+                    <input type="text" id="reg_last_name" placeholder="Last name" required>
                 </label>
-            </div>
-            <div class="padding1">
                 <label class="item item-input cust-input">
-                    <input type="password" name="password" value="" placeholder="Password">
+                    <input type="email" id="reg_email" placeholder="Email" required>
                 </label>
-            </div>
-            <div class="padding1">
                 <label class="item item-input cust-input">
-                    <input type="password" name="password" value="" placeholder="Confirm Password">
+                    <input type="password" id="reg_pass" name="password" value="" placeholder="Password" required>
+                </label>
+                <label class="item item-input cust-input">
+                    <input type="password" id="reg_confirm_pass" name="confirm-password" value="" placeholder="Confirm Password" required>
                 </label>
             </div>
             </div>
+      
             <div class="padding1">
-               <md-button ui-sref="register" class="md-warn md-raised button-full " style="font-weight: bold;">
-            <h3 class="white">Sign Up</h3>
-        </md-button>
+                <!--<button ui-sref="register" class="button button-full button-dark" style="background-color: #333; margin: 0; min-height: 40px !important;">SIGN UP</button>-->
+                <md-button class="md-warn md-raised button-full" ng-disabled="register_form.$invalid" ng-click="registerForm();" style="background-color: #333; font-weight: bold; margin-top: 0; height: 40px !important;">
+                <h3 class="button-h3-register white">Sign Up</h3>
+                </md-button>
             </div>
-
+            <!--<style>
+                input.ng-invalid {border-bottom: 1px solid #b94a48 !important;}
+            </style>
+            <div class="field">
+    <label for="text"></label>
+    <input placeholder="enter text here" 
+           type="text"
+           name="text" ng-model="text"
+           required />
+    <label for="emailAddress"></label>
+    <input placeholder="Email"
+           type="email"
+           name="emailAddress"
+           ng-model="data.email"
+           record-availability-validator="/api/emails.json"
+           required />
+    <div ng-messages="userForm.text.$error" id="error-messages.html">
+      <div ng-message="recordLoading">Checking database...</div>
+      <div ng-message="recordAvailable">The email address is already in use...</div>
+    </div>
+           <br>
+  </div>
+            <div class="help-block" ng-messages="register_form.$error" ng-messages-multiple>
+                <div ng-message="required">Please fill out all fields</div>
+                <div ng-message="email">This field must be a valid email address.</div>
+            </div>
+            <p class="center" style="margin-top: 25px;">Already have an account? <a ui-sref="login" style="text-decoration: none;">Log in</a></p>
         
-        </div>
-
-    </ion-content>
-    </ion-view>
-</form>
+        </div>-->
+    </form>
+</ion-content>
+</ion-view>

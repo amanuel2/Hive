@@ -6,7 +6,6 @@
                 
       
                 function homeCtrlFunc($scope,refService,$mdColorPalette) {
-                    console.log(Object.keys($mdColorPalette));
                 }
     
 })(angular);

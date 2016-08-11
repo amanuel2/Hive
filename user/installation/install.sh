@@ -3,7 +3,7 @@
 echo "_________________________"
 echo "|                       |"
 echo "|Author : Amanuel Bogale|"
-echo "-------------------------"
+echo "|_______________________|"
 echo "CONTRIBUTING PURPOSES"
 
 echo "MAKE SURE YOU HAVE NODE AND NPM BEFORE THIS."

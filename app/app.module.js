@@ -8,7 +8,7 @@
             'ngMessages',
             'ngMdIcons',
             'ngSanitize',
-            'ionic'
+            'ionic',
         ]
     );
 })(angular);

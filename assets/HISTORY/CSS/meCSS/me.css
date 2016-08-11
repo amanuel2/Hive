@@ -1,0 +1,251 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900);
+html {
+  font-family: Roboto; }
+
+/*@import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css);
+	}*/
+.min-tabs {
+  position: relative;
+  clear: both;
+  margin: auto;
+  width: 100%; }
+
+@media screen and (max-width: 600px) {
+  .min-tabs {
+    width: 100% !important; } }
+
+.min-tabs .min-tab {
+  float: left;
+  width: 33.33%; }
+
+.min-tab-2 label {
+  box-sizing: border-box;
+  border-left: 1px solid #ffc900;
+  border-right: 1px solid #ffc900; }
+
+.min-tab label {
+  box-sizing: border-box;
+  border-top: 1px solid #ffc900;
+  border-bottom: 1px solid #ffc900;
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.25px;
+  background-color: #333;
+  height: 32px;
+  line-height: 32px;
+  width: 100%; }
+
+.min-tab label > ng-md-icon {
+  fill: #fff; }
+
+.min-tab label > ng-md-icon > svg {
+  margin-top: 4px; }
+
+.min-tab [type=radio] {
+  display: none; }
+
+.content {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px;
+  opacity: 0;
+  /*background-color: #fff;*/ }
+
+[type=radio]:checked ~ label {
+  color: #ffc900;
+  /*border-bottom: 1px solid white;*/
+  z-index: 2; }
+
+[type=radio]:checked ~ label > ng-md-icon {
+  fill: #ffc900 !important;
+  z-index: 2; }
+
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+  opacity: 1 !important; }
+
+/*i
+	fill: white;
+}
+i:active{
+	fill:  #ffc900; */
+/*For icons to be same as leo requested dont remove
+}*/
+header nav {
+  position: fixed;
+  z-index: 1000;
+  background: #2196F3; }
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header nav ul li a {
+      line-height: 1; }
+    header nav ul li:hover {
+      background: transparent; }
+    header nav ul #title {
+      font-size: 22px;
+      font-weight: 300; }
+
+main {
+  padding-bottom: 150px; }
+  main .container {
+    background-color: #ccc;
+    height: 30px;
+    margin-bottom: 65px;
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #111; }
+  main .fav-buttons {
+    margin: auto;
+    color: #000; }
+  main .jumbo {
+    width: 100%;
+    height: 250px;
+    background: url(http://cine.nl/wp-content/uploads/2015/07/the-revenant-trailer.jpg) center center no-repeat;
+    background-size: cover; }
+  main .icons {
+    display: flex;
+    justify-content: space-between; }
+    main .icons .big-icon img {
+      width: 140px;
+      height: 140px;
+      /*background: url(http://simplyleonardodicaprio.com/wp-content/uploads/leo-1.jpg) center top;*/
+      background-size: 140%;
+      border-radius: 50%;
+      border: 2px solid white;
+      margin-top: -60px; }
+    main .icons .followed-by {
+      width: auto;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      order: -1; }
+    main .icons .following {
+      width: auto;
+      margin: auto;
+      display: flex;
+      justify-content: flex-end; }
+    main .icons .details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px; }
+      main .icons .details h3 {
+        color: #212121;
+        font-size: 28px;
+        margin-top: 15px; }
+      main .icons .details p {
+        color: #727272;
+        margin-top: 0px; }
+    main .icons .bio {
+      margin-bottom: 80px; }
+      main .icons .bio .title h6 {
+        color: #212121;
+        font-size: 18px; }
+      main .icons .bio .content p {
+        color: #727272; }
+    main .icons .pics {
+      margin-bottom: 50px; }
+      main .icons .pics .title {
+        margin-bottom: 20px; }
+        main .icons .pics .title h6 {
+          color: #212121;
+          font-size: 18px; }
+      main .icons .pics .row-1 .s12:nth-of-type(2) {
+        margin-bottom: -10px; }
+      main .icons .pics .row .s12:nth-of-type(1) {
+        margin-bottom: 10px; }
+      main .icons .pics .row .col .card {
+        height: 260px; }
+        main .icons .pics .row .col .card #first-img {
+          height: 100%;
+          background: url(http://www.wallpapers.rs/wallpapers/leonardo_dicaprio_in_movie_scene-1920x1200.jpg) center center;
+          background-size: cover; }
+        main .icons .pics .row .col .card #second-img {
+          height: 100%;
+          background: url(http://tremendouswallpapers.com/wp-content/uploads/2014/12/django-calvin-candie-leonardo-dicaprio-gives-the-hammer-in-movie-274680.jpg) center center;
+          background-size: cover; }
+        main .icons .pics .row .col .card #third-img {
+          height: 100%;
+          background: url(http://cdn.collider.com/wp-content/uploads/leonardo-dicaprio-wolf-of-wall-street.jpg) center center;
+          background-size: cover; }
+        main .icons .pics .row .col .card #forth-img {
+          height: 100%;
+          background: url(http://www.aceshowbiz.com/images/still/the-great-gatsby-still09.jpg) center center;
+          background-size: cover; }
+    main .icons .posts {
+      margin-bottom: 50px; }
+      main .icons .posts .title h6 {
+        color: #212121;
+        font-size: 18px;
+        margin-bottom: 20px; }
+      main .icons .posts .row {
+        margin-bottom: 0px; }
+        main .icons .posts .row .col .card {
+          position: relative; }
+          main .icons .posts .row .col .card .card-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; }
+            main .icons .posts .row .col .card .card-action .tags {
+              display: flex; }
+              main .icons .posts .row .col .card .card-action .tags .chip:first-child {
+                margin-right: 5px; }
+            main .icons .posts .row .col .card .card-action .card-love {
+              cursor: pointer;
+              font-size: 25px;
+              position: absolute;
+              right: 10px;
+              top: 10px;
+              color: white;
+              transition: all 100ms ease-in-out; }
+              main .icons .posts .row .col .card .card-action .card-love:hover {
+                color: #f9a825; }
+    main .icons .blogs {
+      margin-bottom: 80px; }
+      main .icons .blogs .title {
+        margin-bottom: 20px; }
+        main .icons .blogs .title h6 {
+          color: #212121;
+          font-size: 18px; }
+    main .icons .likes .title {
+      margin-bottom: 20px; }
+      main .icons .likes .title h6 {
+        color: #212121;
+        font-size: 18px; }
+    main .icons .likes .row .col .tabs {
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+    main .icons .stretch {
+      height: 500px; }
+    main .icons .fab {
+      transition: all 120ms ease-in-out;
+      bottom: 20px !important; }
+      main .icons .fab .btn-large i {
+        font-size: 40px; }
+      main .icons .fab .orange i {
+        font-size: 20px; }
+  @media screen and (max-width: 600px) {
+    main .jumbo {
+      height: 180px !important; }
+    main .icons {
+      justify-content: center !important; }
+    main .rate {
+      display: none !important; }
+    main .add {
+      display: none !important; } }
+  @media screen and (min-width: 600px) {
+    main .fab {
+      display: none; }
+    main .big-icon img {
+      height: 200px !important;
+      width: 200px !important;
+      margin-top: -90px !important; }
+    main .container {
+      margin-bottom: 95px !important; } }

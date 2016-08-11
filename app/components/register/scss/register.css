@@ -1,11 +1,14 @@
 .item-md-label input {
-  background-color: #FFD700; 
+  background-color: transparent; 
+}
+.form-title {
+    font-weight: bold;
 }
 .padding1 {
-    padding: 4px 6px 4px 6px;
+    padding: 0px 6px 0px 6px;
 }
 .cust-input {
-    background: rgba(255,255,255,0.9) !important;
+    /*background: rgba(255,255,255,0.9) !important;*/
     padding: 3px 0 3px 16px !important;
 }
 .cust-input input {
@@ -13,6 +16,11 @@
     font-weight: 400;
     letter-spacing: 1px;
 }
-
+h3.button-h3-register {
+  text-align: center;
+  padding: 11px;
+  margin: 0 0 4px 0;
+  font-size: 14px;  
+}
 
 /*# sourceMappingURL=register.css.map */

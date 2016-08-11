@@ -1,68 +1,77 @@
 <head>
-    <link rel="stylesheet" href="app/components/discussions/css/discussions.min.css" type="text/css" />
+<link rel="stylesheet" href="app/components/discussions/css/discussions.min.css" type="text/css" />
 </head>
-
+<div>
+  <h2>< <span class="blink">_</span> /></h2>
+</div>
 <ion-view>
 <ion-content>
-  
-<!-- <input type="search" class="search" placeholder="Search..." />
-      <button class="go"><span class="entypo-search"></span></button>
-      <a href="#" class="logo" title="GMRUI"></a> -->
-                                        
-<!-- Try with ionic framework -->
-<!-- <div class="list list-inset cut">
-  <label class="item item-input">
-    <input type="text" placeholder="Search">
-  </label>
-</div> -->
-
-
-<div style="padding: 10px;">
-<button class="button button-stable button-full" data-target="#myModal" data-toggle="modal" >
-   Create new post 
-</button>
-
-
-
-
-<h1 class="md-display-3" style="margin:0px auto; width: 90%;">Last Contents</h1>
-
-
-  <md-content class="md-padding" layout-xs="column" layout="row">
-      
-    <div flex-xs flex-gt-xs="50" layout="column">
-      <md-card>
-        <md-card-header>
-          <md-card-avatar>
-            <img class="md-avatar-icon" ng-src="http://i.imgur.com/HQ3YU7n.gif"></md-icon>
-          </md-card-avatar>
-          <md-card-header-text>
-            <span class="md-title">Amanuel</span>
-            <span class="md-subhead">20 mins ago</span>
-          </md-card-header-text>
-        </md-card-header>
-        <img ng-src="http://imgur.com/rhghnsy.png" class="md-card-image" alt="Washed Out">
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Ports work!</span>
-            <span class="md-subhead">A done task with my OS</span>
-          </md-card-title-text> 
-        </md-card-title>
-        
-        <md-card-content>
-          <p>
-            Hello, I am creator of BoneOS and today is a beautful day. I work on ports and for the first time
-            ports say: "hello world". It is a great done task!
-          </p>
-        </md-card-content>
-        <md-card-actions layout="row" layout-align="start center">
-       <md-button> <ng-md-icon icon="ion-android-favorite" style="border: #000; display: inline-block; padding: 5px;" ></ng-md-icon> Like</md-button>
-          <md-button> <ng-md-icon icon="ion-chatbubbles" style="border: #000; display: inline-block; padding: 5px;" ></ng-md-icon> Comment</md-button>
-        </md-card-actions>
-      </md-card>
+  <!-- start filter-->
+  <div class="filter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6" style="padding:0"><button>FILTER FEED</button></div>
+        <div class="col-xs-6" style="padding:0"><button>START DISCUSSION</button></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 edit">
+          <input type="text" type="search"/>
+        </div>
+      </div>
     </div>
-  </md-content>
-  
-
+  </div>
+  <!-- display count -->
+  <div class="display">
+    <div clas="container">
+      <div class="txt">Displaying <span>111</span> results</div>
+    </div>
+  </div>
+  <!-- Groups-->
+  <div class="groups">
+    <div class="container">
+      <h2>First Name Last Name</h2>
+      <div class="row">
+        <div class="col-xs-4">
+          <img src="http://placehold.it/150x150" style="width:100%;height:100%;"></img>
+        </div>
+        <div class="col-xs-8">
+          <div class="info">
+            <h1>Title goes here.</h1>
+            <md-button class="md-raised pull-right">Tag Name</button>
+            <span color="white">08/07/2016</span>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div id="tri-cont">
+      <div id="triangle"></div>
+      <h2>Group</h2>
+      <div class="row">
+        <div class="col-xs-4">
+          <img src="http://placehold.it/150x150" style="width:100%;height:100%;"></img>
+        </div>
+        <div class="col-xs-8">
+          <div class="info">
+          <h1>Group title goes here.</h1>
+          <md-button class="md-raised pull-right btn-1">Tag Name</md-button>
+          <span>08/07/2016</span>
+          </div>
+        </div>
+      </div>
+      <hr>
+      </div>
+            <h2>First Name Last Name</h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="info">
+          <h1>Title goes here.</h1>
+          <md-button class="md-aised pull-right btn-2">Tag Name</md-button>
+          <span>08/07/2016</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </ion-content>
 </ion-view>

@@ -11,112 +11,112 @@
 
 		"a": {
 			"letter": "A",
-			"URL": "https://i.imgsafe.org/80702e6a48.png"
+			"URL": "https://github.com/leovinogradov/letteravatarpics/blob/master/Letter_Avatars/avatar-a.png?raw=true"
 		},
 
 		"b": {
 			"letter": "B",
-			"URL": "https://i.imgsafe.org/8071bc0a44.png"
+			"URL": "https://github.com/leovinogradov/letteravatarpics/blob/master/Letter_Avatars/avatar-b.png?raw=true"
 		},
 
 		"c": {
 			"letter": "C",
-			"URL": "https://i.imgsafe.org/8074bcecd7.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-c.png"
 		},
 
 		"d": {
 			"letter": "D",
-			"URL": "https://i.imgsafe.org/8076021adb.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-d.png"
 		},
 
 		"e": {
 			"letter": "E",
-			"URL": "https://i.imgsafe.org/8076c1e58c.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-e.png"
 		},
 
 		"f": {
 			"letter": "F",
-			"URL": "https://i.imgsafe.org/8077d37398.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-f.png"
 		},
 		"g": {
 			"letter": "G",
-			"URL": "https://i.imgsafe.org/8078c68317.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-g.png"
 		},
 		"h": {
 			"letter": "H",
-			"URL": "https://i.imgsafe.org/807961a8bd.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-h.png"
 		},
 		"i": {
 			"letter": "I",
-			"URL": "https://i.imgsafe.org/8079fcc67d.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-i.png"
 		},
 		"j": {
 			"letter": "J",
-			"URL": "https://i.imgsafe.org/807a8d7f0f.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-j.png"
 		},
 		"k": {
 			"letter": "K",
-			"URL": "https://i.imgsafe.org/807b86c6f3.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-k.png"
 		},
 		"l": {
 			"letter": "L",
-			"URL": "https://i.imgsafe.org/807c95d97d.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-l.png"
 		},
 		"m": {
 			"letter": "M",
-			"URL": "https://i.imgsafe.org/807e3ac2d8.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-m.png"
 		},
 		"n": {
 			"letter": "N",
-			"URL": "https://i.imgsafe.org/807f4f28f3.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-n.png"
 		},
 		"o": {
 			"letter": "O",
-			"URL": "https://i.imgsafe.org/80804f11ee.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-o.png"
 		},
 		"p": {
 			"letter": "P",
-			"URL": "https://i.imgsafe.org/808141e6d7.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-p.png"
 		},
 		"q": {
 			"letter": "Q",
-			"URL": "https://i.imgsafe.org/8081fc5643.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-q.png"
 		},
 		"r": {
 			"letter": "R",
-			"URL": "https://i.imgsafe.org/8082bc920e.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-r.png"
 		},
 		"s": {
 			"letter": "S",
-			"URL": "https://i.imgsafe.org/808407a7c8.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-s.png"
 		},
 		"t": {
 			"letter": "T",
-			"URL": "https://i.imgsafe.org/80850ef5bc.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-t.png"
 		},
 		"u": {
 			"letter": "U",
-			"URL": "https://i.imgsafe.org/8085d081ef.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-u.png"
 		},
 		"v": {
 			"letter": "V",
-			"URL": "https://i.imgsafe.org/8086a80704.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-v.png"
 		},
 		"w": {
 			"letter": "W",
-			"URL": "https://i.imgsafe.org/80876e07ac.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-w.png"
 		},
 		"x": {
 			"letter": "X",
-			"URL": "https://i.imgsafe.org/808811fc04.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-x.png"
 		},
 		"y": {
 			"letter": "Y",
-			"URL": "https://i.imgsafe.org/8088daddd7.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-y.png"
 		},
 		"z": {
 			"letter": "Z",
-			"URL": "https://i.imgsafe.org/8089ce1ead.png"
+			"URL": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/avatar-z.png"
 		}
 
 	},
@@ -166,7 +166,7 @@
 
 	},
 
-	"Mystery": "https://i.imgsafe.org/80971f0be0.png"
+	"Mystery": "https://raw.githubusercontent.com/leovinogradov/letteravatarpics/master/Letter_Avatars/default_profile.jpg"
 };
           
             
@@ -197,7 +197,7 @@
                     for(var i in this.letters.numbers){
                         lenNum++;
                         if(i == (char)){
-                            URLVALUE = this.letters.numbers[i].URL;
+                            URLVALUE = this.letters.Mystery
                         }
                     }
                     
@@ -207,10 +207,10 @@
                     
                     return URLVALUE;
             
-            
-            
 
-        }    
+        }   
+        
+        
     
     }
 })(angular);

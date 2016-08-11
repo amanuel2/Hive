@@ -3,7 +3,9 @@
         .config(stateParams);
 
     /* @ngInject */
-    function stateParams($stateProvider, $urlRouterProvider, $mdThemingProvider) {
+    function stateParams($stateProvider, $urlRouterProvider, $mdThemingProvider, $ionicConfigProvider) {
+          $ionicConfigProvider.tabs.position('bottom'); 
+          $ionicConfigProvider.tabs.style("standard");
           $stateProvider
             .state('home', {
                 url: '/home',
@@ -41,6 +43,7 @@
                 controller:'loginCtrl'
             })
         
+            
         
         $urlRouterProvider.otherwise('/home');
     }
